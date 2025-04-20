@@ -159,7 +159,7 @@ def main():
                     st.session_state.user_data['name'] = name
                     st.session_state.user_data['start_date'] = start_date
                     update_streak()
-                    st.experimental_rerun()
+                    st.rerun()
         else:
             update_streak()
             
@@ -210,7 +210,7 @@ def main():
                         complete_challenge(challenge['id'])
                         st.success(f"You've started the {challenge['title']} challenge!")
                         st.session_state.active_challenge = challenge
-                        st.experimental_rerun()
+                        st.rerun()
         
         if st.session_state.user_data['completed_challenges']:
             st.subheader("Your Completed Challenges")
